@@ -34,10 +34,6 @@ if submitted:
             dependents
         ]
     }
-
- try:
-        response = requests.post("http://localhost:5000/predict", json=payload)
-        result = response.json()
         
         st.subheader("Risk Assessment Result")
         if result["prediction"] == 0:
